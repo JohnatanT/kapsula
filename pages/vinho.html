@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt">
+    
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Kapsulas</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="../styles/kapsula.css"> -->
+        <link rel="stylesheet" href="../styles/spectrum.css">
+
+        <link rel="stylesheet" href="../styles/kapsula.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.all.js"></script>
+
+    </head>
+
+    <body onload="mudarDica()" class="background">
+        
+      <div class="row row-um" id="topo">
+        <nav class="navbar navbar-light" id="logo-kapusla">
+            <img src="../imgs/logotipo-kapsulas.png" alt="logo" class="logo"> 
+        </nav>
+
+        <h2 class="tema" style="color: red; padding-top: 20px; padding-left: 120px;">Bar de Vinhos</h2>
+
+        <div id="botoes-cima" style="padding-left: 36vw;">
+            <button type="button" class="ajuda red-tooltip" data-toggle="modal" data-target="#exampleModal">Ajuda</button>
+              
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Ajuda</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+
+                    
+                    <div class="modal-body" style="padding:15px;">
+
+                        <p>
+                            Para utilizar o nosso sistema é bem simples Você deve selecionar o elemento que deseja(titulo, imagem, fundo e texto) 
+                            e com as ferramentas, editá-lo como bem entender! As ferramentas variam com o elemento selecionado, 
+                            então fique atento!
+                        </p>
+
+                        <p>Deixamos aqui umas dicas para você não esquecer os princípios de harmonia cromática.</p>
+
+                        <img style="margin-left:30px;"src="../imgs/harmonias.jpg">
+                    
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button type="button" class="ajuda red-tooltip" data-toggle="modal" data-target="#creditosModal">Créditos</button>
+              <div class="modal fade" id="creditosModal" tabindex="-1" role="dialog" aria-labelledby="creditosModalLabel" aria-hidden="true" >
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="creditosModalLabel">Créditos</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+
+                    
+                    <div class="modal-body" style="padding:15px;">
+
+                        <p>
+                            Agradecemos por ultilizar nosso projeto!
+                        </p>
+
+                        <img src="../imgs/equipe.PNG" alt="equipe">
+                    
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+            </div>
+        
+    </div>
+
+        <div class="row row-dois">
+            <!-- MAMEDE -->
+            <div class="col um">
+
+                <div id="balaoDica" class="container balao bg-warning">
+                    Projeto Show! Pense! Digno de complementar os conhecimentos da disciplina.
+                </div>
+
+                
+
+                <img id="mamede" src="../imgs/mamede.png">
+
+
+            </div>
+
+            <!-- POSTER -->
+            <div class="col-6 dois">
+
+                <div class="poster" id="bloco1"class="container bg-danger">
+
+                    <h1 class="titulo-poster titulo-vinho" id="bloco2">Noite<br>com<br>Vinho</h1>
+
+                    <div id="bloco3"></div>
+                    
+                    <p class="paragrafo-poster paragrafo-vinho" id="bloco4">
+                    Nosso vinho tem a melhor qualidade em sabor e aroma do mercado. Venha saborear.
+                    <strong>Adega Vinho Fina</strong>
+                    </p>
+        
+                    <img class="imagem-poster"src="../imgs/Posters/flyer2-img.png">
+
+                    
+
+                </div>
+
+
+
+            </div>
+
+            <!-- FERRAMENTAS -->
+            <div class="col tres">
+                
+                <div class="container col-sm-4">
+                    Fundo<input type='text' id="mudarCorCard01"/>
+                    Título<input type='text' id="mudarCorCard02"/>
+                    <!-- Forma<input type='text' id="mudarCorCard03"/> -->
+                    Parágrafo<input type='text' id="mudarCorCard04"/>
+                </div>
+
+                <div class="container">
+                    <button style="margin-top: 24vw;margin-left: 4vw;"id="botaoConfirmar" id="botaoConfirmar"class="ajuda" onclick="obterResposta()" style="margin-left: 60px;margin-top: 30px; color: #fff;"><a href="#">CONFIRMAR!</a></button>
+                </div>
+
+            </div>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        
+        <script src="../scripts/spectrum.js"></script>
+        <script src="../scripts/kapsula.js"></script>
+        
+        <style>
+        #bloco2{
+          background-color: rgba(255, 255, 255, 0)!important;z-index: 1;left: 188px;    font-size: 51px;
+        }
+        .imagem-poster{
+        margin-top: 3vw;
+        display: inline;
+        height: 473px;
+        position: relative;
+        float: right;}
+
+        .paragrafo-poster{
+          margin-top: 25vw;
+          margin-left: 2vw;
+          width: 117px;
+          background-color: rgb(255, 255, 255);
+          display: inline;
+          margin-top: 21vw;
+    margin-left: 1vw;
+    width: 160px;
+        }
+
+
+        </style>
+        
+    </body>
+
+</html>

@@ -1,0 +1,188 @@
+@font-face {
+    font-family: fonteDoTitulo;
+    src: url('../fonts/British\ Script.otf');
+}
+
+@font-face {
+    font-family: monse;
+    src: url('../fonts/Montserrat-Regular.ttf');
+}
+
+body{
+    font:monse;
+}
+
+.background{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    }
+
+    .row-um{
+        height:5vw;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .row-dois{
+        height:100vw;
+    }
+
+    .um{
+        background-color: rgb(255, 255, 255);
+
+    }
+
+    .dois{
+        background-color: #ddebed;
+
+    }
+
+    .tres{
+        background-color: rgb(255, 255, 255);
+
+    }
+
+    .balao{
+        
+        height: 200px;
+        width:200px;
+
+        margin-top:2vw;
+        margin-left:0.5vw!important;
+
+        padding:15px;
+        border-radius: 15px;
+
+        color:white;
+    }
+
+    #mamede{
+        height: 20vw;
+        width:20vw;
+        bottom:0;
+        margin-top:4vw;
+        margin-left:2vw;
+    }
+
+    .poster{
+        height:40vw;
+        width:30vw;
+        margin-top: 3vw;
+        margin-left:10vw;
+        font-size:14px;
+
+        min-width: 408px;
+        min-height: 544px;
+        
+    }
+
+    .poster h1{
+        font:36px fonteDoTitulo, Arial, Tahoma, Sans-serif;
+    }
+
+    .tema{
+        font:36px monse, Arial, Tahoma, Sans-serif;
+    }
+
+    .titulo-urso{
+        margin-left: 7vw;
+    }
+
+    .titulo-vinho{
+        display: inline;
+        position: absolute;
+    }
+
+    .paragrafo-vinho{
+        display: inline;
+        position: absolute;
+    }
+
+    .imagem-poster{
+        height:300px;
+        margin-left:7vw;
+        margin-top:1vw;
+        position: relative;
+    }
+
+    .paragrafo-poster{
+        padding:2vw;
+    }
+
+    #myCanvas{
+        display: inline-block;
+        z-index:1;
+        border:1px solid #d3d3d3;
+        background:red;
+    }
+
+    .botao-enviar{
+        margin-top:27vw;
+        margin-left:9vw;
+    }
+
+    #bloco3{
+        background-color:rgb(255, 255, 255);
+    }
+    
+    #logo-kapusla img {
+        width: 200px;
+    }
+
+    #topo {
+        display: inline-flex;
+        width: 102%;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .ajuda {
+        width: 140px;
+        height: 45px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        font-weight: 500;
+        color: #fff;
+        background-color: rgb(243, 8, 20);
+        border: none;
+        border-radius: 45px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        outline: none;
+        }
+      
+      .ajuda:hover {
+        background-color: rgb(231, 56, 56);
+        box-shadow: 0px 15px 20px rgba(224, 80, 70, 0.4);
+        color: #fff;
+        transform: translateY(-7px);
+      }
+
+      #botoes-cima {
+        padding-top: 14px;
+
+      }
+
+      #botoes-cima a {
+        color: #fff !important;
+    }
+
+    .sp-replacer {
+        border: none;
+        background: none;
+    }
+
+    #botaoConfirmar a{
+        color:white!important;
+    }
+
+    
